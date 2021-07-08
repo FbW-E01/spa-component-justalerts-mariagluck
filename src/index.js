@@ -16,14 +16,14 @@ const Box = (props) => {
    
      return(
          !props.hide ?
-             <div className={`alert ${color(props.type)} alert-dismissible fade show`} role="alert">
+             <div className={`alert ${color(props.type)}`} role="alert">
                  <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                  </button>
-                 <h4 className="alert-heading"><strong>ALERT! Alert!</strong></h4>
-                 <p>Aww yeah, you successfully read this important alert message.</p>
+                 <h1 className="alert-heading"><strong>ALERT! Alert!</strong></h1>
+                 <h4>{`${props.message}`}</h4>
                  <hr></hr>
-                 <p className="mb-0">Beautiful alert.</p>
+                 <p>Aww yeah, you successfully read this important alert message.</p>
              </div>
           : "" 
      )
