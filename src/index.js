@@ -4,13 +4,17 @@ import ReactDOM from "react-dom";
 const Box = (props) => {
   
      const color = (color) => {
-        switch (color) {
-            case 'blue': return 'alert-primary'; 
-            case 'red': return 'alert-danger'; 
-            case 'orange': return 'alert-warning'; 
-            default: return 'alert-dark';
-         }
-       }
+          if (color === "blue") {
+            return 'alert-primary';
+          }
+          if (color === "red") {
+            return 'alert-danger';
+          }
+          if (color === "orange") {
+            return 'alert-warning'; 
+          }
+     }
+      
    
      if (!props.hide) console.log(props);
    
@@ -25,7 +29,7 @@ const Box = (props) => {
                  <hr></hr>
                  <p>Aww yeah, you successfully read this important alert message.</p>
              </div>
-          : "" 
+          :  <div className="d-none"></div> 
      )
   
 };
